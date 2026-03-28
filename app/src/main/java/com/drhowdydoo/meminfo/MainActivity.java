@@ -1,7 +1,11 @@
 package com.drhowdydoo.meminfo;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+        EdgeToEdge.enable(this);
 
         if (DynamicColors.isDynamicColorAvailable()) DynamicColors.applyToActivityIfAvailable(this);
 
@@ -60,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        int progressBackgroundColor = MaterialColors.getColor(this, com.google.android.material.R.attr.colorBackgroundFloating,Color.WHITE);
-        int progressIndicatorColor = MaterialColors.getColor(this, com.google.android.material.R.attr.colorPrimary,Color.BLACK);
+        int surfaceColor = MaterialColors.getColor(this, com.google.android.material.R.attr.colorSurface, Color.WHITE);
+        getWindow().getDecorView().setBackgroundColor(surfaceColor);
+
+        int progressBackgroundColor = MaterialColors.getColor(this, android.R.attr.colorBackgroundFloating, Color.WHITE);
+        int progressIndicatorColor = MaterialColors.getColor(this, androidx.appcompat.R.attr.colorPrimary, Color.BLACK);
 
         swipeRefreshLayout = binding.swipeRefreshLayout;
         recyclerView = binding.recyclerview;
@@ -106,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setItemAnimator(null);
         new FastScrollerBuilder(recyclerView).useMd2Style().build();
+
+        ViewCompat.setOnApplyWindowInsetsListener(recyclerView, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(v.getPaddingLeft(), v.getPaddingTop(), v.getPaddingRight(), insets.bottom);
+            return windowInsets;
+        });
 
         setUpScheduler();
 
@@ -168,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 map.clear();
                 list.clear();
                 readProc();
-                recyclerViewAdapter.updateList(list);
+                runOnUiThread(() -> recyclerViewAdapter.updateList(list));
             }
         };
         return task;
