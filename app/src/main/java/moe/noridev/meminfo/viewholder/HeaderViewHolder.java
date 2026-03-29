@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo.viewholder;
+package moe.noridev.meminfo.viewholder;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.drhowdydoo.meminfo.databinding.RecyclerViewHeaderLayoutBinding;
+import moe.noridev.meminfo.databinding.RecyclerViewHeaderLayoutBinding;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 
 public class HeaderViewHolder extends RecyclerView.ViewHolder {

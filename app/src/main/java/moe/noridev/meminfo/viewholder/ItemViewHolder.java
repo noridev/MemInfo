@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo.viewholder;
+package moe.noridev.meminfo.viewholder;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.drhowdydoo.meminfo.databinding.RecyclerViewItemLayoutBinding;
+import moe.noridev.meminfo.databinding.RecyclerViewItemLayoutBinding;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 

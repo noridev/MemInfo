@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo;
+package moe.noridev.meminfo;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +17,11 @@ import android.os.Bundle;
 import android.text.format.Formatter;
 import android.widget.Button;
 
-import com.drhowdydoo.meminfo.adapter.RecyclerViewAdapter;
-import com.drhowdydoo.meminfo.databinding.AboutDialogLayoutBinding;
-import com.drhowdydoo.meminfo.databinding.ActivityMainBinding;
-import com.drhowdydoo.meminfo.model.DisplayHeader;
-import com.drhowdydoo.meminfo.model.MemInfo;
+import moe.noridev.meminfo.adapter.RecyclerViewAdapter;
+import moe.noridev.meminfo.databinding.AboutDialogLayoutBinding;
+import moe.noridev.meminfo.databinding.ActivityMainBinding;
+import moe.noridev.meminfo.model.DisplayHeader;
+import moe.noridev.meminfo.model.MemInfo;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.color.DynamicColors;
 import com.google.android.material.color.MaterialColors;

@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo.model;
+package moe.noridev.meminfo.model;
 
 public class MemInfo {
 

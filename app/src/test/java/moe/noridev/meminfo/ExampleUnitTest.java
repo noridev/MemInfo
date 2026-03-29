@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo;
+package moe.noridev.meminfo;
 
 import org.junit.Test;
 

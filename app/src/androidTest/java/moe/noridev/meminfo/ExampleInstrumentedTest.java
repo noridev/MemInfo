@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo;
+package moe.noridev.meminfo;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.drhowdydoo.meminfo", appContext.getPackageName());
+        assertEquals("moe.noridev.meminfo", appContext.getPackageName());
     }
 }

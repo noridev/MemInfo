@@ -1,4 +1,4 @@
-package com.drhowdydoo.meminfo.adapter;
+package moe.noridev.meminfo.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,13 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.drhowdydoo.meminfo.databinding.RecyclerViewHeaderLayoutBinding;
-import com.drhowdydoo.meminfo.databinding.RecyclerViewItemLayoutBinding;
-import com.drhowdydoo.meminfo.model.DisplayHeader;
-import com.drhowdydoo.meminfo.model.MemInfo;
-import com.drhowdydoo.meminfo.util.MyDiffUtil;
-import com.drhowdydoo.meminfo.viewholder.HeaderViewHolder;
-import com.drhowdydoo.meminfo.viewholder.ItemViewHolder;
+import moe.noridev.meminfo.databinding.RecyclerViewHeaderLayoutBinding;
+import moe.noridev.meminfo.databinding.RecyclerViewItemLayoutBinding;
+import moe.noridev.meminfo.model.DisplayHeader;
+import moe.noridev.meminfo.model.MemInfo;
+import moe.noridev.meminfo.util.MyDiffUtil;
+import moe.noridev.meminfo.viewholder.HeaderViewHolder;
+import moe.noridev.meminfo.viewholder.ItemViewHolder;
 
 import java.util.ArrayList;
 

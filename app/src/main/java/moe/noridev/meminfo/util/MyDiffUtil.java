@@ -1,7 +1,7 @@
-package com.drhowdydoo.meminfo.util;
+package moe.noridev.meminfo.util;
 
-import com.drhowdydoo.meminfo.model.DisplayHeader;
-import com.drhowdydoo.meminfo.model.MemInfo;
+import moe.noridev.meminfo.model.DisplayHeader;
+import moe.noridev.meminfo.model.MemInfo;
 
 import java.util.ArrayList;
 import java.util.Objects;
